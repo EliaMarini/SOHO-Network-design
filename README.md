@@ -1,10 +1,10 @@
-<h1>SOHO Network design</h1>
+<h1>:globe_with_meridians: SOHO Network design</h1>
 <br />
 
-<h1>Scenario</h1>
+<h1>:jigsaw: Scenario</h1>
 <br />
 <p>A company is intending to open a branch office and you are assigned to design the network for the branch. The branch office is 
-intended to operate separate from the head office networ.
+intended to operate separate from the head office network.
 Being a small network, the company has the following requirements during implementation:
 <ul>
   <li>One router and one switch to be used</li>
@@ -19,7 +19,7 @@ design and implement a network considering the above requirements.
 </p>
 <br />
 
-<h1>Network architecture</h1>
+<h1>:green_square: Network architecture</h1>
 
 <br />
 <img width="1292" height="654" alt="NetworkDesign" src="https://github.com/user-attachments/assets/57715ce9-3d77-41ec-bc4d-fa9a73465842" />
@@ -28,7 +28,7 @@ design and implement a network considering the above requirements.
 <p>This is the network design with the required network devices and a subnet for each department</p>
 <br />
 
-<h1>Subnetting</h1>
+<h1>:green_square: Subnetting</h1>
 
 <br />
 <p>The base network is 192.168.1.0 with a default /24 subnet mask. 3 subnets are needed so i applied a /26 subnet mask. Each subnets contains 62 usable ip addresses.
@@ -63,7 +63,7 @@ design and implement a network considering the above requirements.
 
 <br />
 
-<h1>VLANs setup</h1>
+<h1>:green_square: VLANs setup</h1>
 
 <br />
 <p>A VLAN for each department is required. These are the VLANs that i created:
@@ -92,7 +92,7 @@ Using the "show running-config" command i checked the VLANs configuration
 </p>
 <br />
 
-<h1>Inter VLAN rounting</h1>
+<h1>Inter VLAN routing</h1>
 <br />
 <p>The next step is to activate the inter vlan routing by creating sub-interfaces on the router
 <br />
@@ -108,10 +108,11 @@ For each vlan these are going to be the default gateways:
 </p>
 <br />
 
-<h1>DHCP service</h1>
+<h1>:green_square: DHCP service</h1>
 <br />
-<p>Hosts needs to obtain automatically IP configuration, to do so i configured the DHCP service on the router
+<p>Hosts need to automatically obtain IP configuration, to do so i configured the DHCP service on the router
 <br />
+  <br />
   <img width="466" height="339" alt="serverdhcp" src="https://github.com/user-attachments/assets/05f6b38d-03cb-4260-bb54-2d03da81cad0" />
 <br />
  Then i configured each host to use the DHCP service
@@ -120,9 +121,10 @@ For each vlan these are going to be the default gateways:
 <br />
 </p>
 
-<h1>Wireless configuration</h1>
+<h1>:signal_strength: Wireless configuration</h1>
 <br />
 <p>Lastly each department must have a wireless network. The following images show the configurations of the access point and of the wireless laptop in the customer service/reception department
+<br />
 <br />
 <img width="1100" height="495" alt="access point config" src="https://github.com/user-attachments/assets/264f04e2-4966-40a4-b193-5f8d9237db0b" />
 <br />
@@ -131,10 +133,11 @@ For each vlan these are going to be the default gateways:
 </p>
 <br />
 
-<h1>Connectivity test</h1>
+<h1>:triangular_flag_on_post: Connectivity test</h1>
 <br />
-<p>By using the ping command i tested the comunication between devices in different subents. These are the configurations of each device and the following results.
+<p>By using the ping command i tested the comunication between devices in different subnets. These are the configurations of each device and the following results.
 <br />
+  <br />
   <img width="1093" height="278" alt="Connectivitytest1" src="https://github.com/user-attachments/assets/c3d6956f-f7a8-4646-8c23-982a8a3dbe47" />
   <br />
   <img width="1104" height="274" alt="Connectivitytest2" src="https://github.com/user-attachments/assets/8ad163ce-6157-491f-ae58-53490adb8afb" />
